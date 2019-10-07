@@ -1,5 +1,4 @@
 .mode tabs
-.output broker_counts.tab
 
 select
   tb.name,
