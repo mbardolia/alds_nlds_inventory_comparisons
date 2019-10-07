@@ -1,4 +1,5 @@
-
+/* we are comparing our wholesale to their buyer price, i think */
+/* > 1 means we're cheaper */
 select
   tickpick.brokerage_id,
   tb.name,
@@ -6,6 +7,7 @@ select
   tickpick.r   as row,
   tevo.ticket_price,
   tickpick.p,
+  '' as " ",
   case when tevo.ticket_price > 0 then round( ( tickpick.p / tevo.ticket_price ), 2) end as compared
 from
   tickpick
@@ -17,5 +19,4 @@ group by
 
 order by
   tb.name,
-  compared;
-
+  compared
