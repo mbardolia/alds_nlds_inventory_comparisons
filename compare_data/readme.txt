@@ -1,3 +1,7 @@
+connect to tevo db, run tevo_inventory.sql, save results as:
+
+
+
 sqlite3
 sqlite3> .mode tabs
 sqlite3> .headers on
